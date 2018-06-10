@@ -1,0 +1,44 @@
+%sections{
+    overflow-y: scroll;
+    min-height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    h3{
+        font-size: 4vh;
+    }
+    h2, h3, h4{
+        color: $colour;
+    }
+
+    @media screen and (max-width:1000px){
+        h2{
+            font-size: 3.5vh;
+        }
+        h3{
+            font-size: 3vh;
+        }
+        h4{
+            font-size: 2.6vh;
+        }
+    }
+}
+
+section#dc{
+    @extend %sections;
+    background-image: url(../images/dc_leaderboard.jpg);
+}
+section#marvel{
+    @extend %sections;
+    background-image: url(../images/marvel_leaderboard.jpg);
+}
+section#got{
+    @extend %sections;
+    background-image: url(../images/got_leaderboard.jpg);
+}
+section#football{
+    @extend %sections;
+    background-image: url(../images/football_leaderboard.jpg);
+}

@@ -1,0 +1,45 @@
+body{
+	font-family: 'Comfortaa', cursive;
+	font-stretch: extra-expanded;
+    overflow-x: hidden;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;	
+}
+.fadeout {
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+.load {
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding-top: 30vh;
+	position: fixed;
+	width: 100vw;
+	z-index: 9999999;
+    height: 100vh;
+	background: #000;
+	text-align: center;
+	-webkit-transition: opacity 1s ease;
+	-moz-transition: opacity 1s ease;
+	-o-transition: opacity 1s ease;
+	transition: opacity 1s ease;
+	
+	img{
+	    width: 30vh;
+	    height: 30vh;
+	}
+}
+
+a{
+    text-decoration: none;
+}
+
+$colour: aqua;
+
+@import 'enterDetails';
+@import 'evaluate';
+@import 'leaderboard';
+@import 'selectQuiz';
+@import 'test';
