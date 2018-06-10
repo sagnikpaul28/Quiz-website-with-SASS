@@ -59,7 +59,7 @@
             <div id="form_part">
                 <form action="initialize.php" method="post">
                     Enter your details<br><br>
-                    Name: &nbsp;&nbsp;&nbsp;<input type="text" name="name" placeholder="Enter your name" required="true" autocomplete="off"><br><br>
+                    Name: &nbsp;&nbsp;&nbsp;<input type="text" name="name" placeholder="Enter Name.." required="true" autocomplete="off"><br><br>
                     <input type="hidden" name="quiz" value="dc">
                     <button type="submit" class="button">Submit</button>
                 </form>

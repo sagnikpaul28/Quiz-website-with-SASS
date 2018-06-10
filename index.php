@@ -18,7 +18,7 @@
         </script>
         <script>
         $(document).ready(function(){
-            var width = jquery(window).width();
+            var width = jQuery(window).width();
             if (width > 768){
                 $("#got").hover(function(){
                     $("#got").stop(true, false).animate({
@@ -175,7 +175,7 @@
         <div id="got">
             <div id="content">
                 <center>
-                    <h1><span>G A M E</span> &nbsp; <span>O F</span> &nbsp; <span>T H R O N E S</span></h1>
+                    <h1>GAME OF THRONES</h1>
                     <a href="enterDetailsGot.php"><div id="button">
                         <h1>Take Quiz</h1>
                     </div>
@@ -188,7 +188,7 @@
         <div id="dc">
             <div id="content">
                 <center>
-                    <h1>D C &nbsp; C O M I C S</h1>
+                    <h1>DC COMICS</h1>
                     <a href="enterDetailsDc.php"><div id="button">
                         <h1>Take Quiz</h1>
                     </div>
@@ -200,7 +200,7 @@
         <div id="marvel">
             <div id="content">
                 <center>
-                    <h1>M A R V E L</h1>
+                    <h1>MARVEL</h1>
                     <a href="enterDetailsMarvel.php"><div id="button">
                         <h1>Take Quiz</h1>
                     </div>
@@ -212,7 +212,7 @@
         <div id="football">
             <div id="content">
                 <center>
-                    <h1>F O O T B A L L</h1>
+                    <h1>FOOTBALL</h1>
                     <a href="enterDetailsFootball.php"><div id="button">
                         <h1>Take Quiz</h1>
                     </div>

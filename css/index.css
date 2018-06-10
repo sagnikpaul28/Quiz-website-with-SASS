@@ -6,6 +6,12 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+@media screen and (max-width: 769px) {
+  body {
+    margin: 0;
+    overflow: hidden;
+  }
+}
 
 .fadeout {
   opacity: 0;
@@ -127,17 +133,14 @@ a {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-#layer-evaluate {
-  width: 90vw;
-  margin-left: 5vw;
-  margin-right: 5vw;
-  margin-top: 2vh;
-  margin-bottom: 4vh;
+#evaluate-layer {
+  width: 90%;
+  margin: 2vh 3% 4vh;
   background: rgba(0, 0, 0, 0.8);
-  padding: 2vh;
+  padding: 2%;
 }
 @media screen and (max-width: 768px) {
-  #layer-evaluate #layer-evaluate {
+  #evaluate-layer #evaluate-layer {
     position: absolute;
     width: 90vw;
     left: 0;
@@ -148,15 +151,15 @@ a {
     padding-bottom: 3vh;
   }
 }
-#layer-evaluate h5 {
+#evaluate-layer h5 {
   font-size: 3vh;
 }
-#layer-evaluate h4 {
+#evaluate-layer h4 {
   margin-top: 1vh;
   font-size: 4vh;
 }
 
-section#football, section#got, section#marvel, section#dc {
+section#football, section#marvel, section#dc, section#got {
   overflow-y: scroll;
   min-height: 100vh;
   width: 100vw;
@@ -164,38 +167,38 @@ section#football, section#got, section#marvel, section#dc {
   background-repeat: no-repeat;
   background-size: cover;
 }
-section#football h3, section#got h3, section#marvel h3, section#dc h3 {
+section#football h3, section#marvel h3, section#dc h3, section#got h3 {
   font-size: 4vh;
 }
-section#football h2, section#got h2, section#marvel h2, section#dc h2, section#football h3, section#got h3, section#marvel h3, section#dc h3, section#football h4, section#got h4, section#marvel h4, section#dc h4 {
+section#football h2, section#marvel h2, section#dc h2, section#got h2, section#football h3, section#marvel h3, section#dc h3, section#got h3, section#football h4, section#marvel h4, section#dc h4, section#got h4 {
   color: aqua;
 }
 @media screen and (max-width: 1000px) {
-  section#football h2, section#got h2, section#marvel h2, section#dc h2 {
+  section#football h2, section#marvel h2, section#dc h2, section#got h2 {
     font-size: 3.5vh;
   }
-  section#football h3, section#got h3, section#marvel h3, section#dc h3 {
+  section#football h3, section#marvel h3, section#dc h3, section#got h3 {
     font-size: 3vh;
   }
-  section#football h4, section#got h4, section#marvel h4, section#dc h4 {
+  section#football h4, section#marvel h4, section#dc h4, section#got h4 {
     font-size: 2.6vh;
   }
 }
 
+section#got {
+  background-image: url("../images/got_leaderboard.jpg");
+}
+
 section#dc {
-  background-image: url(../images/dc_leaderboard.jpg);
+  background-image: url("../images/dc_leaderboard.jpg");
 }
 
 section#marvel {
-  background-image: url(../images/marvel_leaderboard.jpg);
-}
-
-section#got {
-  background-image: url(../images/got_leaderboard.jpg);
+  background-image: url("../images/marvel_leaderboard.jpg");
 }
 
 section#football {
-  background-image: url(../images/football_leaderboard.jpg);
+  background-image: url("../images/football_leaderboard.jpg");
 }
 
 body#index #football, body#index #marvel, body#index #dc, body#index #got {
@@ -228,6 +231,7 @@ body#index #football #content, body#index #marvel #content, body#index #dc #cont
 }
 body#index #football #content h1, body#index #marvel #content h1, body#index #dc #content h1, body#index #got #content h1 {
   font-size: 6vh;
+  letter-spacing: 0.2em;
   font-family: "Rock Salt", cursive;
   margin-top: 10vh;
   color: white;
@@ -238,6 +242,7 @@ body#index #football #content h1, body#index #marvel #content h1, body#index #dc
 @media screen and (max-width: 768px) {
   body#index #football #content h1, body#index #marvel #content h1, body#index #dc #content h1, body#index #got #content h1 {
     font-size: 2.4vh;
+    letter-spacing: 0;
   }
 }
 body#index #football #content #button, body#index #marvel #content #button, body#index #dc #content #button, body#index #got #content #button {
@@ -258,13 +263,14 @@ body#index #football #content #button, body#index #marvel #content #button, body
 }
 @media screen and (max-width: 768px) {
   body#index #football #content #button, body#index #marvel #content #button, body#index #dc #content #button, body#index #got #content #button {
-    margin-left: 7.5vw;
-    position: fixed;
+    margin: 10%;
+    position: absolute;
+    left: 0;
     bottom: 0;
-    margin-bottom: 10vh;
-    margin-top: 65vh;
-    width: 55vw;
+    width: 80%;
     height: 8vh;
+    border-color: rgba(255, 91, 91, 0.4);
+    background-color: rgba(255, 91, 91, 0.1);
   }
 }
 body#index #football #content #button h1, body#index #marvel #content #button h1, body#index #dc #content #button h1, body#index #got #content #button h1 {
@@ -292,50 +298,147 @@ body#index #football #content #button:hover h1, body#index #marvel #content #but
 }
 
 body#index #got {
-  background-image: url(../images/got_half.jpg);
+  margin-left: 0;
+  background-image: url("../images/got_half.jpg");
 }
 @media screen and (min-width: 769px) {
   body#index #got:hover {
-    background-image: url(../images/got_full.jpg);
+    background-image: url("../images/got_full.jpg");
   }
-  body#index #got:hover #layer {
-    opacity: 0.7;
+}
+body#index #got:hover #layer {
+  opacity: 0.7;
+}
+@media screen and (max-width: 768px) {
+  body#index #got {
+    position: relative;
+    height: 50vh;
+    width: 50vw;
+    display: inline-block;
+    float: left;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  body#index #got #content {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  body#index #got #layer {
+    height: 100%;
+    width: 100%;
+    position: absolute;
   }
 }
 body#index #dc {
   margin-left: 25vw;
-  background-image: url(../images/dc_half.jpg);
+  background-image: url("../images/dc_half.jpg");
 }
 @media screen and (min-width: 769px) {
   body#index #dc:hover {
-    background-image: url(../images/dc_full.jpg);
+    background-image: url("../images/dc_full.jpg");
   }
-  body#index #dc:hover #layer {
-    opacity: 0.7;
+}
+body#index #dc:hover #layer {
+  opacity: 0.7;
+}
+@media screen and (max-width: 768px) {
+  body#index #dc {
+    position: relative;
+    height: 50vh;
+    width: 50vw;
+    display: inline-block;
+    float: left;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  body#index #dc #content {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  body#index #dc #layer {
+    height: 100%;
+    width: 100%;
+    position: absolute;
   }
 }
 body#index #marvel {
   margin-left: 50vw;
-  background-image: url(../images/marvel_half.jpg);
+  background-image: url("../images/marvel_half.jpg");
 }
 @media screen and (min-width: 769px) {
   body#index #marvel:hover {
-    background-image: url(../images/marvel_full.jpg);
+    background-image: url("../images/marvel_full.jpg");
   }
-  body#index #marvel:hover #layer {
-    opacity: 0.7;
+}
+body#index #marvel:hover #layer {
+  opacity: 0.7;
+}
+@media screen and (max-width: 768px) {
+  body#index #marvel {
+    position: relative;
+    height: 50vh;
+    width: 50vw;
+    display: inline-block;
+    float: left;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  body#index #marvel #content {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  body#index #marvel #layer {
+    height: 100%;
+    width: 100%;
+    position: absolute;
   }
 }
 body#index #football {
   margin-left: 75vw;
-  background-image: url(../images/football_half.jpg);
+  background-image: url("../images/football_half.jpg");
 }
 @media screen and (min-width: 769px) {
   body#index #football:hover {
-    background-image: url(../images/football_full.jpg);
+    background-image: url("../images/football_full.jpg");
   }
-  body#index #football:hover #layer {
-    opacity: 0.7;
+}
+body#index #football:hover #layer {
+  opacity: 0.7;
+}
+@media screen and (max-width: 768px) {
+  body#index #football {
+    position: relative;
+    height: 50vh;
+    width: 50vw;
+    display: inline-block;
+    float: left;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  body#index #football #content {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  body#index #football #layer {
+    height: 100%;
+    width: 100%;
+    position: absolute;
   }
 }
 
@@ -350,9 +453,11 @@ div#test-layer {
 }
 @media screen and (max-width: 768px) {
   div#test-layer {
-    height: 90vh;
+    height: 94vh;
     padding: 0;
-    position: fixed;
+    width: 94vw;
+    margin: 2vh 2vw;
+    padding: 1vh 1vw;
   }
 }
 div#test-layer h4 {
@@ -368,7 +473,7 @@ div#test-layer h4 {
 div#test-layer h3 {
   margin-top: 2.5vh;
   margin-bottom: 2vh;
-  font-size: 4vh;
+  font-size: 3.5vh;
   padding-bottom: 1vh;
   color: aqua;
   font-weight: normal;
@@ -402,11 +507,27 @@ div#test-layer form #opta {
   width: 45vw;
   margin: 10vh 0 0 0;
 }
+@media screen and (max-width: 768px) {
+  div#test-layer form #opta {
+    width: 100%;
+    text-align: left;
+    margin: 20px 0;
+    position: relative;
+  }
+}
 div#test-layer form #optb {
   color: aqua;
   position: fixed;
   width: 45vw;
   margin: 10vh 0 0 45vw;
+}
+@media screen and (max-width: 768px) {
+  div#test-layer form #optb {
+    width: 100%;
+    text-align: left;
+    margin: 20px 0;
+    position: relative;
+  }
 }
 div#test-layer form #optc {
   color: aqua;
@@ -414,11 +535,27 @@ div#test-layer form #optc {
   width: 45vw;
   margin: 25vh 0 0 0;
 }
+@media screen and (max-width: 768px) {
+  div#test-layer form #optc {
+    width: 100%;
+    text-align: left;
+    margin: 20px 0;
+    position: relative;
+  }
+}
 div#test-layer form #optd {
   color: aqua;
   position: fixed;
   width: 45vw;
   margin: 25vh 0 0 45vw;
+}
+@media screen and (max-width: 768px) {
+  div#test-layer form #optd {
+    width: 100%;
+    text-align: left;
+    margin: 20px 0;
+    position: relative;
+  }
 }
 div#test-layer form .button {
   bottom: 0;

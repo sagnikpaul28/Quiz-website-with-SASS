@@ -1,6 +1,6 @@
 %selectQuiz-div{
     top: 0;
-    left:0;
+    left: 0;
     position: fixed;
     width: 25vw;
     height: 100vh;
@@ -32,6 +32,7 @@
 
         h1{
             font-size: 6vh;
+            letter-spacing: 0.2em;
             font-family: 'Rock Salt', cursive;
             margin-top: 10vh;
             color: white;
@@ -41,6 +42,7 @@
 
             @media screen and (max-width: 768px){
                 font-size: 2.4vh;
+                letter-spacing: 0;
             }
         }
 
@@ -61,13 +63,14 @@
             margin-top: 55vh;
 
             @media screen and (max-width: 768px){
-                margin-left: 7.5vw;
-                position: fixed;
+                margin: 10%;
+                position: absolute;
+                left: 0;
                 bottom: 0;
-                margin-bottom: 10vh;
-                margin-top: 65vh;
-                width: 55vw;
+                width: 80%;
                 height: 8vh;
+                border-color: rgba(255, 91, 91, 0.4);
+                background-color: rgba(255, 91, 91, 0.1);
             }
 
             h1{
@@ -99,65 +102,46 @@
     }
 }
 
+
 body#index{
-    #got{
-        @extend %selectQuiz-div;
-        background-image: url(../images/got_half.jpg);
+    @each $item, $margin in $list{
+        ##{$item}{
+            @extend %selectQuiz-div;
+            margin-left: $margin;
+            background-image: url("../images/#{$item}_half.jpg");
 
-        &:hover{
-            @media screen and (min-width: 769px){
-                background-image: url(../images/got_full.jpg);
-            
+            &:hover{
+                @media screen and (min-width: 769px){
+                    background-image: url("../images/#{$item}_full.jpg");
+                }
+
                 #layer{
                     opacity: 0.7;
                 }
             }
-        }
-    }
 
-    #dc{
-        @extend %selectQuiz-div;
-        margin-left: 25vw;
-        background-image: url(../images/dc_half.jpg);
+            @media screen and (max-width: 768px){
+                position: relative;
+                height: 50vh;
+                width: 50vw;
+                display: inline-block;
+                float: left;
+                margin: 0;
+            }
 
-        &:hover{
-            @media screen and (min-width: 769px){
-                background-image: url(../images/dc_full.jpg);
-            
-                #layer{
-                    opacity: 0.7;
+            #content{
+                @media screen and (max-width: 768px){
+                    position: absolute;
+                    height: 100%;
+                    width: 100%;
                 }
             }
-        }
-    }
 
-    #marvel{
-        @extend %selectQuiz-div;
-        margin-left: 50vw;
-        background-image: url(../images/marvel_half.jpg);
-
-        &:hover{
-            @media screen and (min-width: 769px){
-                background-image: url(../images/marvel_full.jpg);
-            
-                #layer{
-                    opacity: 0.7;
-                }
-            }
-        }
-    }
-
-    #football{
-        @extend %selectQuiz-div;
-        margin-left: 75vw;
-        background-image: url(../images/football_half.jpg);
-
-        &:hover{
-            @media screen and (min-width: 769px){
-                background-image: url(../images/football_full.jpg);
-            
-                #layer{
-                    opacity: 0.7;
+            #layer{
+                @media screen and (max-width: 768px){
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
                 }
             }
         }

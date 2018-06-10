@@ -56,14 +56,13 @@
         }
         ?>
     </head>
-    <body style="background-size: contain; background-position: center; overflow: auto; background-attachment: fixed; background-color: black">
+    <body style="background-size: cover; background-position: center; overflow: auto; background-attachment: fixed;">
         <div class="load">
             <img src="images/loading%20(2).gif">
         </div>
         <center>
         <div id="evaluate-layer">
             <?php
-            echo "<br>";
             if (!isset($_SESSION['name'])){
                 header('location:selectQuiz.php');
             }

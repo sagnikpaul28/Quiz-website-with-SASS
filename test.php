@@ -3,7 +3,6 @@
     <head>
         <title>Quiz</title>
         <link rel="shortcut icon" href="images/favicon.png" type="image/gif">
-        <meta HTTP-EQUIV="REFRESH" content="10; url=testscript.php">
         <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
         <meta charset="utf-8">
         <link rel="stylesheet" href="css/index.css" type="text/css">
@@ -117,7 +116,6 @@
             $optd=$row['opt4'];
         }
         ?>
-        <br>
         <div id="test-layer">
             <h4 align="right" id="timer">Time remaining: 10 secs</h4>
             <h3>

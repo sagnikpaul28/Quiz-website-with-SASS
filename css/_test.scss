@@ -3,6 +3,13 @@
     position: fixed;
     width: 45vw;
     margin: $margin;
+
+    @media screen and (max-width: 768px){
+        width: 100%;
+        text-align: left;
+        margin: 20px 0;
+        position: relative;
+    }
 }
 
 $layer-width: 90vw;
@@ -18,9 +25,11 @@ div#test-layer{
     background-color: rgba(0, 0, 0, 0.7);
 
     @media screen and (max-width: 768px){
-        height: 90vh;
+        height: 94vh;
         padding: 0;
-        position: fixed;
+        width: 94vw;
+        margin: 2vh 2vw;
+        padding: 1vh 1vw;
     }
 
     h4{
@@ -35,7 +44,7 @@ div#test-layer{
     h3{
         margin-top: 2.5vh;
         margin-bottom: 2vh;
-        font-size: 4vh;
+        font-size: 3.5vh;
         padding-bottom: 1vh;
         color: $colour;
         font-weight: normal;

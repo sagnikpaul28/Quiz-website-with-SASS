@@ -26,19 +26,9 @@
     }
 }
 
-section#dc{
-    @extend %sections;
-    background-image: url(../images/dc_leaderboard.jpg);
-}
-section#marvel{
-    @extend %sections;
-    background-image: url(../images/marvel_leaderboard.jpg);
-}
-section#got{
-    @extend %sections;
-    background-image: url(../images/got_leaderboard.jpg);
-}
-section#football{
-    @extend %sections;
-    background-image: url(../images/football_leaderboard.jpg);
+@each $item, $margin in $list{
+    section##{$item}{
+        @extend %sections;
+        background-image: url("../images/#{$item}_leaderboard.jpg");
+    }
 }
