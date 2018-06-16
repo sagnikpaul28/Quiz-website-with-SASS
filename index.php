@@ -4,7 +4,7 @@
         <title>Select Your Quiz</title>
         <link rel="shortcut icon" href="images/favicon.png" type="image/gif">
         <meta charset="utf-8">
-        <link href="https://fonts.googleapis.com/css?family=PT+Mono|Rock+Salt" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:200,500,700" rel="stylesheet">
         <link rel="stylesheet" href="css/index.css" type="text/css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script>
@@ -176,10 +176,7 @@
             <div id="content">
                 <center>
                     <h1>GAME OF THRONES</h1>
-                    <a href="enterDetailsGot.php"><div id="button">
-                        <h1>Take Quiz</h1>
-                    </div>
-                    </a>
+                    <a href="enterDetailsGot.php"><button class="button">Take Quiz</button></a>
                 </center>
             </div>
             <div id="layer">
@@ -189,10 +186,7 @@
             <div id="content">
                 <center>
                     <h1>DC COMICS</h1>
-                    <a href="enterDetailsDc.php"><div id="button">
-                        <h1>Take Quiz</h1>
-                    </div>
-                    </a>
+                    <a href="enterDetailsDc.php"><button class="button">Take Quiz</button></a>
                 </center>
             </div>
             <div id="layer"></div>
@@ -201,10 +195,7 @@
             <div id="content">
                 <center>
                     <h1>MARVEL</h1>
-                    <a href="enterDetailsMarvel.php"><div id="button">
-                        <h1>Take Quiz</h1>
-                    </div>
-                    </a>
+                    <a href="enterDetailsMarvel.php"><button class="button">Take Quiz</button></a>
                 </center>
             </div>
             <div id="layer"></div>
@@ -213,10 +204,7 @@
             <div id="content">
                 <center>
                     <h1>FOOTBALL</h1>
-                    <a href="enterDetailsFootball.php"><div id="button">
-                        <h1>Take Quiz</h1>
-                    </div>
-                    </a>
+                    <a href="enterDetailsFootball.php"><button class="button">Take Quiz</button></a>
                 </center>
             </div>
             <div id="layer"></div>

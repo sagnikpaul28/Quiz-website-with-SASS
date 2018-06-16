@@ -5,7 +5,7 @@
         <link rel="shortcut icon" href="images/favicon.png" type="image/gif">
         <meta charset="utf-8">
         <link rel="stylesheet" href="css/index.css" type="text/css">
-        <link href="https://fonts.googleapis.com/css?family=Special+Elite" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:200,500,700" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script>
             window.onload = function(){
@@ -19,7 +19,7 @@
         <?php
         session_start();
         if (!isset($_SESSION['topic'])){
-            header('location:selectQuiz.php');
+            header('location:index.php');
         }
         $topic = $_SESSION['topic'];
         if (strcmp($topic, "dc")==0)
@@ -117,20 +117,20 @@
                 else
                     $ans=" ";
                     
-                echo "<h5 style='margin-top:3vh;color:aqua'><i><b>Question No ".$i."<b></i></h5>";
-                echo "<h4  style='margin-top:1vh;color:rgb(42, 182, 170)'>".$ques."</h4>";
+                echo "<h5><i><b>Question No ".$i."<b></i></h5>";
+                echo "<h4>".$ques."</h4>";
                 if ($ans==" ")
-                    echo "<h5 style='margin-top:1vh;color:rgb(230, 20, 20)'>Not answered</h5>";
+                    echo "<h5 class='not-answered'>Not answered</h5>";
                 else
-                    echo "<h5  style='margin-top:1vh;color:rgb(190, 190, 30)'>Your answer is ".$ans."</h5>";
-                echo "<h5 style='margin-top:1vh;color:rgb(20, 180, 25)'>Correct answer is ".$corans."</h5><hr>";
+                    echo "<h5 id='answer'>Your answer is ".$ans."</h5>";
+                echo "<h5 id='correct-answer'>Correct answer is ".$corans."</h5><hr>";
                 
                 if ($ans==$corans)
                     $score++;
                 $row = mysqli_fetch_array($result);
             }
             $name1=$_SESSION['name1'];
-            echo "<h3 style='font-size:4.2vh;color:rgb(12, 142, 140)'><b>Your score is ".$score."/10</b></h3>";
+            echo "<h3><b>Your score is ".$score."/10</b></h3>";
             if (strcmp($_SESSION['topic'], "dc")==0){
                 $sql="SELECT * FROM dc_score WHERE name='$name1'";
                 $results = mysqli_query($con, $sql) or die(mysqli_error($con));
@@ -160,7 +160,7 @@
                 }
             }
             $result= mysqli_query($con, $sql) or die(mysqli_error($con));
-            echo "<h5 style='padding:0vh;font-size:3.5vh;margin-top:1vh;margin-bottom:2vh;color:rgb(12, 142, 140);'>To check the Leaderboard <a href='leaderboard.php'>Click here</a></h5>";
+            echo "<h5 id='final'>To check the Leaderboard <a href='leaderboard.php'>Click here</a></h5>";
             ?>
         </div>
         </center>

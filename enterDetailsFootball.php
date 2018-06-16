@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-       <title>Enter your details</title>
+        <title>Enter your details</title>
         <link rel="shortcut icon" href="images/favicon.png" type="image/gif">
         <link rel="stylesheet" href="css/index.css" type="text/css">
         <meta charset="utf-8">
-        <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Poppins:200,500,700" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
@@ -57,7 +57,7 @@
         
         <div id="layer-enterdetails"><center>
             <div id="form_part">
-                <form action="initialize.php" method="post">
+                <form action="initialize.php" method="post" id="enter-details">
                     Enter your details<br><br>
                     Name: &nbsp;&nbsp;&nbsp;<input type="text" name="name" placeholder="Enter Name.." required="true" autocomplete="off"><br><br>
                     <input type="hidden" name="quiz" value="football">

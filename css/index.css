@@ -1,164 +1,4 @@
-body {
-  font-family: "Comfortaa", cursive;
-  font-stretch: extra-expanded;
-  overflow-x: hidden;
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-@media screen and (max-width: 769px) {
-  body {
-    margin: 0;
-    overflow: hidden;
-  }
-}
-
-.fadeout {
-  opacity: 0;
-  filter: alpha(opacity=0);
-}
-
-.load {
-  left: 0;
-  top: 0;
-  margin: 0;
-  padding-top: 30vh;
-  position: fixed;
-  width: 100vw;
-  z-index: 9999999;
-  height: 100vh;
-  background: #000;
-  text-align: center;
-  -webkit-transition: opacity 1s ease;
-  -moz-transition: opacity 1s ease;
-  -o-transition: opacity 1s ease;
-  transition: opacity 1s ease;
-}
-.load img {
-  width: 30vh;
-  height: 30vh;
-}
-
-a {
-  text-decoration: none;
-}
-
-#layer-enterdetails, #myCarousel img, #myCarousel {
-  height: 100vh;
-  width: 100vw;
-}
-
-#myCarousel {
-  position: fixed;
-  left: 0;
-  top: 0;
-}
-#layer-enterdetails {
-  background: rgba(0, 0, 0, 0.4);
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 2;
-}
-#layer-enterdetails #form_part {
-  border: aqua thin solid;
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  height: 50vh;
-  margin-right: 20vw;
-  margin-bottom: 25vh;
-  padding: 5vh;
-  background-color: rgba(0, 0, 0, 0.5);
-  width: 60vw;
-}
-@media screen and (max-width: 768px) {
-  #layer-enterdetails #form_part {
-    left: 0;
-    top: 0;
-    position: fixed;
-    width: 90vw;
-    height: 45vh;
-    margin-left: 5vw;
-    margin-top: 20vh;
-  }
-}
-#layer-enterdetails #form_part form {
-  font-family: "Comfortaa", cursive;
-  color: aqua;
-  font-size: 3.5vh;
-}
-#layer-enterdetails #form_part form input {
-  background-color: rgba(0, 0, 0, 0.8);
-  border-color: aqua;
-  padding: 1.2vh;
-}
-@media screen and (max-width: 768px) {
-  #layer-enterdetails #form_part form input {
-    width: 70vw;
-    padding-top: 2vw;
-    padding-bottom: 2vw;
-    padding-left: 5vw;
-    padding-right: 5vw;
-  }
-}
-#layer-enterdetails #form_part form .button {
-  position: fixed;
-  margin-bottom: 30vh;
-  margin-left: 40vw;
-  left: 0;
-  bottom: 0;
-  border-color: #3498db;
-  background-color: rgba(2, 132, 130, 0.4);
-  -webkit-border-radius: 5;
-  -moz-border-radius: 5;
-  border-radius: 1vh;
-  color: #ffffff;
-  font-size: 3vh;
-  width: 20vw;
-  padding: 1.5vh 10vh 1.5vh 10vh;
-}
-@media screen and (max-width: 768px) {
-  #layer-enterdetails #form_part form .button {
-    top: 0;
-    width: 60vw;
-    height: 7vh;
-    margin-left: 20vw;
-    margin-top: 55vh;
-  }
-}
-#layer-enterdetails #form_part form .button:hover {
-  border-color: #3498db;
-  background: #afcde0;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-
-#evaluate-layer {
-  width: 90%;
-  margin: 2vh 3% 4vh;
-  background: rgba(0, 0, 0, 0.8);
-  padding: 2%;
-}
-@media screen and (max-width: 768px) {
-  #evaluate-layer #evaluate-layer {
-    position: absolute;
-    width: 90vw;
-    left: 0;
-    top: 0;
-    margin-top: 5vh;
-    margin-left: 5vw;
-    padding: 0;
-    padding-bottom: 3vh;
-  }
-}
-#evaluate-layer h5 {
-  font-size: 3vh;
-}
-#evaluate-layer h4 {
-  margin-top: 1vh;
-  font-size: 4vh;
-}
-
+/*Index Page*/
 section#football, section#marvel, section#dc, section#got {
   overflow-y: scroll;
   min-height: 100vh;
@@ -185,6 +25,795 @@ section#football h2, section#marvel h2, section#dc h2, section#got h2, section#f
   }
 }
 
+body {
+  font-family: "Poppins", sans-serif !important;
+  overflow-x: hidden;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  font-size: 14px;
+}
+@media (max-width: 768px) {
+  body {
+    overflow: hidden;
+  }
+}
+
+body#index .button {
+  border: #ff5b5b double medium;
+  cursor: pointer;
+  background-color: rgba(255, 91, 91, 0.2);
+  transition: 0.5s;
+  box-shadow: 2vh 2vh 2vh #000;
+  align-self: center;
+  height: 10vh;
+  width: 60vw;
+  position: absolute;
+  top: auto;
+  left: auto;
+  bottom: 10vh;
+  right: 5vw;
+  padding: initial;
+  color: white;
+  font-size: 2em;
+  text-shadow: 0vh 0vh 0vh #000;
+}
+@media (max-width: 768px) {
+  body#index .button {
+    margin: 10%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 80%;
+    height: 8vh;
+    border-color: rgba(255, 91, 91, 0.4);
+    background-color: rgba(255, 91, 91, 0.1);
+    font-size: 1.3em;
+  }
+}
+body#index .button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  transform: scale(1.1);
+  transition: 0.5s;
+  color: #ff5b5b;
+  text-shadow: 1.5vh 1.5vh 1.5vh #000;
+}
+
+form#enter-details .button {
+  height: auto;
+  width: 50%;
+  position: absolute;
+  top: auto;
+  left: 25%;
+  bottom: 15%;
+  right: 25%;
+  padding: 1.5vh 0;
+  border-color: aqua;
+  background-color: rgba(0, 255, 255, 0.1);
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  color: white;
+  font-size: 1em;
+}
+@media (max-width: 768px) {
+  form#enter-details .button {
+    height: 7vh;
+    width: 70%;
+    position: absolute;
+    top: auto;
+    left: 15%;
+    bottom: 5vh;
+    right: 15%;
+    padding: initial;
+  }
+}
+form#enter-details .button:hover {
+  border-color: aqua;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+form#test .button {
+  height: auto;
+  width: 40vw;
+  position: fixed;
+  top: auto;
+  left: 30vw;
+  bottom: 10vh;
+  right: auto;
+  padding: 1.5vh 10vh 1.5vh 10vh;
+  border-radius: 1vh;
+  -webkit-border-radius: 1vh;
+  -moz-border-radius: 1vh;
+  background-color: rgba(0, 255, 255, 0.2);
+  border-color: aqua;
+  color: white;
+  font-size: 1em;
+}
+@media (max-width: 768px) {
+  form#test .button {
+    height: auto;
+    width: 80vw;
+    position: fixed;
+    top: auto;
+    left: 10vw;
+    bottom: 10vh;
+    right: 10vw;
+    padding: 1.5vh 10vh 1.5vh 10vh;
+  }
+}
+
+.button:hover {
+  background-color: rgba(0, 255, 255, 0.1);
+}
+
+#myCarousel {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: initial;
+  left: initial;
+  bottom: initial;
+  right: initial;
+  padding: initial;
+}
+#myCarousel img {
+  height: 100vh;
+  width: 100vw;
+  margin: auto;
+  padding: auto;
+}
+
+body#index div#got {
+  margin-left: 0;
+  background-image: url("../images/got_half.jpg");
+  height: initial;
+  width: 25vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: initial;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+body#index div#got:hover #content {
+  opacity: 1;
+  transition: 0.5s;
+}
+@media (min-width: 769px) {
+  body#index div#got:hover {
+    background-image: url("../images/got_full.jpg");
+  }
+}
+body#index div#got div#layer {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: initial;
+  left: initial;
+  bottom: initial;
+  right: initial;
+  padding: initial;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+}
+@media (max-width: 768px) {
+  body#index div#got div#layer {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    opacity: 1;
+  }
+}
+body#index div#got div#content {
+  height: 100vh;
+  width: 70vw;
+  position: fixed;
+  top: initial;
+  left: initial;
+  bottom: initial;
+  right: initial;
+  padding: initial;
+  opacity: 0;
+  z-index: 1;
+}
+@media (max-width: 768px) {
+  body#index div#got div#content {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: initial;
+    left: initial;
+    bottom: initial;
+    right: initial;
+    padding: initial;
+    opacity: 1;
+  }
+}
+@media (max-width: 768px) {
+  body#index div#got {
+    display: inline-block;
+    float: left;
+    margin: 0;
+    height: 50vh;
+    width: 50vw;
+    position: relative;
+    top: auto;
+    left: auto;
+    bottom: auto;
+    right: auto;
+    padding: initial;
+  }
+}
+body#index div#dc {
+  margin-left: 25vw;
+  background-image: url("../images/dc_half.jpg");
+  height: initial;
+  width: 25vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: initial;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+body#index div#dc:hover #content {
+  opacity: 1;
+  transition: 0.5s;
+}
+@media (min-width: 769px) {
+  body#index div#dc:hover {
+    background-image: url("../images/dc_full.jpg");
+  }
+}
+body#index div#dc div#layer {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: initial;
+  left: initial;
+  bottom: initial;
+  right: initial;
+  padding: initial;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+}
+@media (max-width: 768px) {
+  body#index div#dc div#layer {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    opacity: 1;
+  }
+}
+body#index div#dc div#content {
+  height: 100vh;
+  width: 70vw;
+  position: fixed;
+  top: initial;
+  left: initial;
+  bottom: initial;
+  right: initial;
+  padding: initial;
+  opacity: 0;
+  z-index: 1;
+}
+@media (max-width: 768px) {
+  body#index div#dc div#content {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: initial;
+    left: initial;
+    bottom: initial;
+    right: initial;
+    padding: initial;
+    opacity: 1;
+  }
+}
+@media (max-width: 768px) {
+  body#index div#dc {
+    display: inline-block;
+    float: left;
+    margin: 0;
+    height: 50vh;
+    width: 50vw;
+    position: relative;
+    top: auto;
+    left: auto;
+    bottom: auto;
+    right: auto;
+    padding: initial;
+  }
+}
+body#index div#marvel {
+  margin-left: 50vw;
+  background-image: url("../images/marvel_half.jpg");
+  height: initial;
+  width: 25vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: initial;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+body#index div#marvel:hover #content {
+  opacity: 1;
+  transition: 0.5s;
+}
+@media (min-width: 769px) {
+  body#index div#marvel:hover {
+    background-image: url("../images/marvel_full.jpg");
+  }
+}
+body#index div#marvel div#layer {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: initial;
+  left: initial;
+  bottom: initial;
+  right: initial;
+  padding: initial;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+}
+@media (max-width: 768px) {
+  body#index div#marvel div#layer {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    opacity: 1;
+  }
+}
+body#index div#marvel div#content {
+  height: 100vh;
+  width: 70vw;
+  position: fixed;
+  top: initial;
+  left: initial;
+  bottom: initial;
+  right: initial;
+  padding: initial;
+  opacity: 0;
+  z-index: 1;
+}
+@media (max-width: 768px) {
+  body#index div#marvel div#content {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: initial;
+    left: initial;
+    bottom: initial;
+    right: initial;
+    padding: initial;
+    opacity: 1;
+  }
+}
+@media (max-width: 768px) {
+  body#index div#marvel {
+    display: inline-block;
+    float: left;
+    margin: 0;
+    height: 50vh;
+    width: 50vw;
+    position: relative;
+    top: auto;
+    left: auto;
+    bottom: auto;
+    right: auto;
+    padding: initial;
+  }
+}
+body#index div#football {
+  margin-left: 75vw;
+  background-image: url("../images/football_half.jpg");
+  height: initial;
+  width: 25vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding: initial;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+body#index div#football:hover #content {
+  opacity: 1;
+  transition: 0.5s;
+}
+@media (min-width: 769px) {
+  body#index div#football:hover {
+    background-image: url("../images/football_full.jpg");
+  }
+}
+body#index div#football div#layer {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  top: initial;
+  left: initial;
+  bottom: initial;
+  right: initial;
+  padding: initial;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+}
+@media (max-width: 768px) {
+  body#index div#football div#layer {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    opacity: 1;
+  }
+}
+body#index div#football div#content {
+  height: 100vh;
+  width: 70vw;
+  position: fixed;
+  top: initial;
+  left: initial;
+  bottom: initial;
+  right: initial;
+  padding: initial;
+  opacity: 0;
+  z-index: 1;
+}
+@media (max-width: 768px) {
+  body#index div#football div#content {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: initial;
+    left: initial;
+    bottom: initial;
+    right: initial;
+    padding: initial;
+    opacity: 1;
+  }
+}
+@media (max-width: 768px) {
+  body#index div#football {
+    display: inline-block;
+    float: left;
+    margin: 0;
+    height: 50vh;
+    width: 50vw;
+    position: relative;
+    top: auto;
+    left: auto;
+    bottom: auto;
+    right: auto;
+    padding: initial;
+  }
+}
+
+div#layer-enterdetails {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: initial;
+  left: initial;
+  bottom: initial;
+  right: initial;
+  padding: initial;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+div#layer-enterdetails div#form_part {
+  height: 50vh;
+  width: 60vw;
+  position: fixed;
+  top: auto;
+  left: auto;
+  bottom: 25vh;
+  right: 20vw;
+  padding: 5vh;
+  border: aqua thin solid;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 768px) {
+  div#layer-enterdetails div#form_part {
+    height: 45vh;
+    width: 90vw;
+    position: fixed;
+    top: 20vh;
+    left: 5vw;
+    bottom: auto;
+    right: auto;
+    padding: 2vmin;
+  }
+}
+
+div#evaluate-layer {
+  height: auto;
+  width: 90%;
+  margin: 2vh 3% 4vh;
+  padding: 2%;
+  background: rgba(0, 0, 0, 0.8);
+}
+@media (max-width: 768px) {
+  div#evaluate-layer #evaluate-layer {
+    height: auto;
+    width: 90vw;
+    position: absolute;
+    top: 5vh;
+    left: 5vw;
+    bottom: auto;
+    right: auto;
+    padding: 0 0 3vh;
+  }
+}
+
+div#test-layer {
+  height: 90vh;
+  width: 90vw;
+  margin: 4vh 4vw;
+  padding: 1vh 1vw;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+@media (max-width: 768px) {
+  div#test-layer {
+    height: 94vh;
+    width: 94vw;
+    margin: 2vh 2vw;
+    padding: 1vh 1vw;
+  }
+}
+
+form#enter-details {
+  color: aqua;
+  font-size: 1.5em;
+}
+form#enter-details input {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-color: aqua;
+  padding: 1.2vh;
+}
+@media (max-width: 768px) {
+  form#enter-details input {
+    height: auto;
+    width: 70vw;
+    margin: auto;
+    padding: 2vw 5vw;
+  }
+}
+
+form#test {
+  font-size: 2em;
+}
+@media (max-width: 768px) {
+  form#test {
+    font-size: 1em;
+  }
+}
+form#test input {
+  height: 3vh;
+  width: 3vh;
+  color: aqua;
+}
+@media (max-width: 768px) {
+  form#test input {
+    float: left;
+  }
+}
+@media (max-width: 768px) {
+  form#test div {
+    text-align: center;
+  }
+}
+form#test #opta {
+  color: aqua;
+  position: fixed;
+  width: 45vw;
+  margin: 10vh 0 0 0;
+}
+@media (max-width: 768px) {
+  form#test #opta {
+    width: 100%;
+    text-align: left;
+    margin: 20px 0;
+    position: relative;
+  }
+}
+form#test #optb {
+  color: aqua;
+  position: fixed;
+  width: 45vw;
+  margin: 10vh 0 0 45vw;
+}
+@media (max-width: 768px) {
+  form#test #optb {
+    width: 100%;
+    text-align: left;
+    margin: 20px 0;
+    position: relative;
+  }
+}
+form#test #optc {
+  color: aqua;
+  position: fixed;
+  width: 45vw;
+  margin: 25vh 0 0 0;
+}
+@media (max-width: 768px) {
+  form#test #optc {
+    width: 100%;
+    text-align: left;
+    margin: 20px 0;
+    position: relative;
+  }
+}
+form#test #optd {
+  color: aqua;
+  position: fixed;
+  width: 45vw;
+  margin: 25vh 0 0 45vw;
+}
+@media (max-width: 768px) {
+  form#test #optd {
+    width: 100%;
+    text-align: left;
+    margin: 20px 0;
+    position: relative;
+  }
+}
+
+h1 {
+  font-size: 3.2em;
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2em;
+  }
+}
+
+h2 {
+  font-size: 2.5em;
+}
+
+h3 {
+  font-size: 2em;
+}
+@media (max-width: 768px) {
+  h3 {
+    font-size: 1.5em;
+  }
+}
+
+h4 {
+  font-size: 1.5em;
+}
+
+h5 {
+  font-size: 1.25em;
+}
+@media (max-width: 768px) {
+  h5 {
+    font-size: 1.1em;
+  }
+}
+
+h6 {
+  font-size: 0.8em;
+}
+
+body#index h1 {
+  letter-spacing: 0.2em;
+  margin-top: 10vh;
+  color: #ff5b5b;
+  text-shadow: 2vh 2vh 1.5vh #000;
+  font-weight: 900;
+}
+@media (max-width: 768px) {
+  body#index h1 {
+    letter-spacing: 0;
+  }
+}
+
+div#test-layer h3 {
+  margin-top: 2.5vh;
+  margin-bottom: 2vh;
+  padding-bottom: 1vh;
+  color: aqua;
+}
+@media (max-width: 768px) {
+  div#test-layer h3 {
+    padding-left: 3vw;
+  }
+}
+div#test-layer h4 {
+  margin: 0;
+  color: aqua;
+}
+div#test-layer h5 {
+  color: aqua;
+  margin: 0;
+  padding: 0;
+}
+@media (max-width: 768px) {
+  div#test-layer h5 {
+    padding-left: 3vw;
+  }
+}
+div#test-layer h6 {
+  margin: 0;
+  color: aqua;
+}
+@media (max-width: 768px) {
+  div#test-layer h6 {
+    padding-right: 5vw;
+  }
+}
+
+div#evaluate-layer h3 {
+  color: aqua;
+}
+div#evaluate-layer h4 {
+  margin-top: 1vh;
+  color: aqua;
+}
+div#evaluate-layer h5 {
+  margin-top: 3vh;
+  color: white;
+}
+div#evaluate-layer h5#final {
+  padding: 0vh;
+  margin-top: 1vh;
+  margin-bottom: 2vh;
+  color: aqua;
+}
+div#evaluate-layer h5#not-answered, div#evaluate-layer h5#answer {
+  color: red;
+}
+div#evaluate-layer h5#correct-answer {
+  color: green;
+}
+
+a {
+  text-decoration: none;
+}
+
+.fadeout {
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+.load {
+  left: 0;
+  top: 0;
+  margin: 0;
+  padding-top: 30vh;
+  position: fixed;
+  width: 100vw;
+  z-index: 9999999;
+  height: 100vh;
+  background: black;
+  text-align: center;
+  -webkit-transition: opacity 1s ease;
+  -moz-transition: opacity 1s ease;
+  -o-transition: opacity 1s ease;
+  transition: opacity 1s ease;
+}
+.load img {
+  width: 30vh;
+  height: 30vh;
+}
+
 section#got {
   background-image: url("../images/got_leaderboard.jpg");
 }
@@ -199,388 +828,6 @@ section#marvel {
 
 section#football {
   background-image: url("../images/football_leaderboard.jpg");
-}
-
-body#index #football, body#index #marvel, body#index #dc, body#index #got {
-  top: 0;
-  left: 0;
-  position: fixed;
-  width: 25vw;
-  height: 100vh;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-body#index #football:hover #content, body#index #marvel:hover #content, body#index #dc:hover #content, body#index #got:hover #content {
-  opacity: 1;
-  transition: 0.5s;
-}
-body#index #football #layer, body#index #marvel #layer, body#index #dc #layer, body#index #got #layer {
-  position: fixed;
-  height: 100vh;
-  width: 70vw;
-  background-color: black;
-  opacity: 0;
-}
-body#index #football #content, body#index #marvel #content, body#index #dc #content, body#index #got #content {
-  position: fixed;
-  height: 100vh;
-  width: 70vw;
-  opacity: 0;
-  z-index: 1;
-}
-body#index #football #content h1, body#index #marvel #content h1, body#index #dc #content h1, body#index #got #content h1 {
-  font-size: 6vh;
-  letter-spacing: 0.2em;
-  font-family: "Rock Salt", cursive;
-  margin-top: 10vh;
-  color: white;
-  color: #DC4C46;
-  text-shadow: 2vh 2vh 1.5vh #000;
-  font-weight: 900;
-}
-@media screen and (max-width: 768px) {
-  body#index #football #content h1, body#index #marvel #content h1, body#index #dc #content h1, body#index #got #content h1 {
-    font-size: 2.4vh;
-    letter-spacing: 0;
-  }
-}
-body#index #football #content #button, body#index #marvel #content #button, body#index #dc #content #button, body#index #got #content #button {
-  border-color: #DC4C46;
-  border-style: double;
-  border-width: medium;
-  height: 15vh;
-  padding: 0;
-  cursor: pointer;
-  width: 60vw;
-  height: 10vh;
-  font-size: 5vh;
-  background-color: rgba(255, 91, 91, 0.2);
-  transition: 0.5s;
-  box-shadow: 2vh 2vh 2vh #000;
-  align-self: center;
-  margin-top: 55vh;
-}
-@media screen and (max-width: 768px) {
-  body#index #football #content #button, body#index #marvel #content #button, body#index #dc #content #button, body#index #got #content #button {
-    margin: 10%;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 80%;
-    height: 8vh;
-    border-color: rgba(255, 91, 91, 0.4);
-    background-color: rgba(255, 91, 91, 0.1);
-  }
-}
-body#index #football #content #button h1, body#index #marvel #content #button h1, body#index #dc #content #button h1, body#index #got #content #button h1 {
-  font-family: "PT Mono", monospace;
-  transform: translateY(-8vh);
-  color: white;
-  font-size: 5vh;
-  text-shadow: 0vh 0vh 0vh #000;
-  transition: 0.5s;
-}
-@media screen and (max-width: 768px) {
-  body#index #football #content #button h1, body#index #marvel #content #button h1, body#index #dc #content #button h1, body#index #got #content #button h1 {
-    font-size: 3vh;
-  }
-}
-body#index #football #content #button:hover, body#index #marvel #content #button:hover, body#index #dc #content #button:hover, body#index #got #content #button:hover {
-  background-color: rgba(0, 0, 0, 0.6);
-  transform: scale(1.1);
-  transition: 0.5s;
-}
-body#index #football #content #button:hover h1, body#index #marvel #content #button:hover h1, body#index #dc #content #button:hover h1, body#index #got #content #button:hover h1 {
-  color: #DC4C46;
-  transition: 0.5s;
-  text-shadow: 1.5vh 1.5vh 1.5vh #000;
-}
-
-body#index #got {
-  margin-left: 0;
-  background-image: url("../images/got_half.jpg");
-}
-@media screen and (min-width: 769px) {
-  body#index #got:hover {
-    background-image: url("../images/got_full.jpg");
-  }
-}
-body#index #got:hover #layer {
-  opacity: 0.7;
-}
-@media screen and (max-width: 768px) {
-  body#index #got {
-    position: relative;
-    height: 50vh;
-    width: 50vw;
-    display: inline-block;
-    float: left;
-    margin: 0;
-  }
-}
-@media screen and (max-width: 768px) {
-  body#index #got #content {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-  }
-}
-@media screen and (max-width: 768px) {
-  body#index #got #layer {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-  }
-}
-body#index #dc {
-  margin-left: 25vw;
-  background-image: url("../images/dc_half.jpg");
-}
-@media screen and (min-width: 769px) {
-  body#index #dc:hover {
-    background-image: url("../images/dc_full.jpg");
-  }
-}
-body#index #dc:hover #layer {
-  opacity: 0.7;
-}
-@media screen and (max-width: 768px) {
-  body#index #dc {
-    position: relative;
-    height: 50vh;
-    width: 50vw;
-    display: inline-block;
-    float: left;
-    margin: 0;
-  }
-}
-@media screen and (max-width: 768px) {
-  body#index #dc #content {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-  }
-}
-@media screen and (max-width: 768px) {
-  body#index #dc #layer {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-  }
-}
-body#index #marvel {
-  margin-left: 50vw;
-  background-image: url("../images/marvel_half.jpg");
-}
-@media screen and (min-width: 769px) {
-  body#index #marvel:hover {
-    background-image: url("../images/marvel_full.jpg");
-  }
-}
-body#index #marvel:hover #layer {
-  opacity: 0.7;
-}
-@media screen and (max-width: 768px) {
-  body#index #marvel {
-    position: relative;
-    height: 50vh;
-    width: 50vw;
-    display: inline-block;
-    float: left;
-    margin: 0;
-  }
-}
-@media screen and (max-width: 768px) {
-  body#index #marvel #content {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-  }
-}
-@media screen and (max-width: 768px) {
-  body#index #marvel #layer {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-  }
-}
-body#index #football {
-  margin-left: 75vw;
-  background-image: url("../images/football_half.jpg");
-}
-@media screen and (min-width: 769px) {
-  body#index #football:hover {
-    background-image: url("../images/football_full.jpg");
-  }
-}
-body#index #football:hover #layer {
-  opacity: 0.7;
-}
-@media screen and (max-width: 768px) {
-  body#index #football {
-    position: relative;
-    height: 50vh;
-    width: 50vw;
-    display: inline-block;
-    float: left;
-    margin: 0;
-  }
-}
-@media screen and (max-width: 768px) {
-  body#index #football #content {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-  }
-}
-@media screen and (max-width: 768px) {
-  body#index #football #layer {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-  }
-}
-
-div#test-layer {
-  left: 0;
-  top: 0;
-  margin: 5vh 2vw;
-  width: 90vw;
-  height: 80vh;
-  padding: 2vh 2vw;
-  background-color: rgba(0, 0, 0, 0.7);
-}
-@media screen and (max-width: 768px) {
-  div#test-layer {
-    height: 94vh;
-    padding: 0;
-    width: 94vw;
-    margin: 2vh 2vw;
-    padding: 1vh 1vw;
-  }
-}
-div#test-layer h4 {
-  margin: 0;
-  font-size: 2.5vh;
-  color: aqua;
-}
-@media screen and (max-width: 768px) {
-  div#test-layer h4 {
-    padding-right: 5vw;
-  }
-}
-div#test-layer h3 {
-  margin-top: 2.5vh;
-  margin-bottom: 2vh;
-  font-size: 3.5vh;
-  padding-bottom: 1vh;
-  color: aqua;
-  font-weight: normal;
-}
-@media screen and (max-width: 768px) {
-  div#test-layer h3 {
-    padding-left: 3vw;
-  }
-}
-div#test-layer form {
-  font-size: 4vh;
-}
-div#test-layer form input {
-  height: 3vh;
-  width: 3vh;
-  color: aqua;
-}
-@media screen and (max-width: 768px) {
-  div#test-layer form input {
-    float: left;
-  }
-}
-@media screen and (max-width: 768px) {
-  div#test-layer form div {
-    text-align: center;
-  }
-}
-div#test-layer form #opta {
-  color: aqua;
-  position: fixed;
-  width: 45vw;
-  margin: 10vh 0 0 0;
-}
-@media screen and (max-width: 768px) {
-  div#test-layer form #opta {
-    width: 100%;
-    text-align: left;
-    margin: 20px 0;
-    position: relative;
-  }
-}
-div#test-layer form #optb {
-  color: aqua;
-  position: fixed;
-  width: 45vw;
-  margin: 10vh 0 0 45vw;
-}
-@media screen and (max-width: 768px) {
-  div#test-layer form #optb {
-    width: 100%;
-    text-align: left;
-    margin: 20px 0;
-    position: relative;
-  }
-}
-div#test-layer form #optc {
-  color: aqua;
-  position: fixed;
-  width: 45vw;
-  margin: 25vh 0 0 0;
-}
-@media screen and (max-width: 768px) {
-  div#test-layer form #optc {
-    width: 100%;
-    text-align: left;
-    margin: 20px 0;
-    position: relative;
-  }
-}
-div#test-layer form #optd {
-  color: aqua;
-  position: fixed;
-  width: 45vw;
-  margin: 25vh 0 0 45vw;
-}
-@media screen and (max-width: 768px) {
-  div#test-layer form #optd {
-    width: 100%;
-    text-align: left;
-    margin: 20px 0;
-    position: relative;
-  }
-}
-div#test-layer form .button {
-  bottom: 0;
-  left: 0;
-  position: fixed;
-  background-color: rgba(2, 132, 130, 0.4);
-  border-color: aqua;
-  -webkit-border-radius: 5;
-  -moz-border-radius: 5;
-  border-radius: 1vh;
-  margin-bottom: 12vh;
-  margin-left: 40vw;
-  color: #ffffff;
-  font-size: 3vh;
-  padding: 1.5vh 10vh 1.5vh 10vh;
-  width: 20vw;
-}
-@media screen and (max-width: 768px) {
-  div#test-layer form .button {
-    width: 80vw;
-    margin: 0 10vw 12vw;
-  }
-}
-div#test-layer form .button:hover {
-  background-color: rgba(2, 132, 130, 0.2);
 }
 
 /*# sourceMappingURL=index.css.map */

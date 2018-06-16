@@ -1,0 +1,13 @@
+body{
+	font-family: $font-family !important;
+    overflow-x: hidden;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;	
+    margin: 0;
+    font-size: $font-size;
+
+	@include for-phone-only{
+		overflow: hidden;
+	}
+}

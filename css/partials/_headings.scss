@@ -1,0 +1,103 @@
+h1{
+	font-size: 3.2em;
+	@include for-phone-only{
+		font-size: 2em;
+	}
+}
+h2{
+	font-size: 2.5em;
+}
+h3{
+	font-size: 2em;
+	@include for-phone-only{
+		font-size: 1.5em;
+	}
+}
+h4{
+	font-size: 1.5em;
+}
+h5{
+	font-size: 1.25em;
+	@include for-phone-only{
+		font-size: 1.1em;
+	}
+}
+h6{
+	font-size: 0.8em;
+}
+
+//Index Page
+body#index h1{
+    letter-spacing: 0.2em;
+    margin-top: 10vh;
+    color: $persimmon;
+    text-shadow: 2vh 2vh 1.5vh #000;
+    font-weight: 900;
+
+    @include for-phone-only{
+        letter-spacing: 0;
+    }
+}
+
+//Test Page
+div#test-layer{
+	h3{
+	    margin-top: 2.5vh;
+	    margin-bottom: 2vh;
+	    padding-bottom: 1vh;
+	    color: $cyan;
+
+	    @include for-phone-only{
+	        padding-left: 3vw;
+	    }
+
+	}
+	h4{
+	    margin: 0;
+	    color: $cyan;
+	}
+	h5{
+		color: $cyan;
+		margin: 0;
+		padding: 0;
+		@include for-phone-only{
+	        padding-left: 3vw;
+	    }
+	}
+	h6{
+		margin: 0;
+		color: $cyan;
+
+		@include for-phone-only{
+	        padding-right: 5vw;
+	    }
+	}
+}
+
+
+//Evaluate Page
+div#evaluate-layer{
+	h3{
+		color: $cyan;
+	}
+	h4{
+	    margin-top: 1vh;
+	    color: $cyan;
+	}
+	h5{
+		margin-top:3vh;
+		color: $white;
+	}
+	h5#final{
+		padding:0vh;
+		margin-top:1vh;
+		margin-bottom:2vh;
+		color: $cyan;
+	}
+	h5#not-answered, h5#answer{
+		color: $red;
+	}
+	h5#correct-answer{
+		color: $green;
+	}
+}

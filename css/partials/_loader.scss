@@ -1,0 +1,25 @@
+.fadeout {
+	opacity: 0;
+	filter: alpha(opacity=0);
+}
+.load {
+    left: 0;
+    top: 0;
+    margin: 0;
+    padding-top: 30vh;
+	position: fixed;
+	width: 100vw;
+	z-index: 9999999;
+    height: 100vh;
+	background: $black;
+	text-align: center;
+	-webkit-transition: opacity 1s ease;
+	-moz-transition: opacity 1s ease;
+	-o-transition: opacity 1s ease;
+	transition: opacity 1s ease;
+	
+	img{
+	    width: 30vh;
+	    height: 30vh;
+	}
+}

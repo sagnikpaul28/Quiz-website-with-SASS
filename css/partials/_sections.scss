@@ -1,0 +1,6 @@
+@each $item, $margin in $list{
+    section##{$item}{
+        @extend %leaderboard-sections;
+        background-image: url("../images/#{$item}_leaderboard.jpg");
+    }
+}

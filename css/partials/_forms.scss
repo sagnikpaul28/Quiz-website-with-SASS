@@ -1,0 +1,50 @@
+form#enter-details{
+    color: $cyan;
+    font-size: 1.5em;
+
+    input{
+        background-color: rgba($black, 0.8);
+        border-color: $cyan;
+        padding: 1.2vh;
+
+        @include for-phone-only{
+            @include dimensions(auto, 70vw, auto, 2vw 5vw);
+        }
+    }
+}
+
+form#test{
+    font-size: 2em;
+    @include for-phone-only{
+        font-size: 1em;
+    }   
+
+    input{
+        height: 3vh;
+        width: 3vh;
+        color: $cyan;
+
+        @include for-phone-only{
+            float: left;
+        }
+    }
+
+    div{
+        @include for-phone-only{
+            text-align: center;
+        }
+    }
+
+    #opta{
+        @include options(10vh 0 0 0);
+    }
+    #optb{
+        @include options(10vh 0 0 45vw);
+    }
+    #optc{
+        @include options(25vh 0 0 0);
+    }
+    #optd{
+        @include options(25vh 0 0 45vw);
+    }
+}

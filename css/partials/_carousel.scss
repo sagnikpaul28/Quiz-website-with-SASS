@@ -1,0 +1,7 @@
+#myCarousel{
+    @include dimensions-with-position(fixed);
+
+    img{
+        @include dimensions;
+    }
+}

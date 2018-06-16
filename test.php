@@ -3,7 +3,7 @@
     <head>
         <title>Quiz</title>
         <link rel="shortcut icon" href="images/favicon.png" type="image/gif">
-        <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Poppins:200,500,700" rel="stylesheet">
         <meta charset="utf-8">
         <link rel="stylesheet" href="css/index.css" type="text/css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -83,7 +83,7 @@
         $i=$_SESSION['n'];
         if ($i==0)
         {
-            header('location: selectQuiz.php');
+            header('location: index.php');
         }
         else if ($i>10)
             header('location:leaderboard.php');
@@ -117,12 +117,12 @@
         }
         ?>
         <div id="test-layer">
-            <h4 align="right" id="timer">Time remaining: 10 secs</h4>
-            <h3>
+            <h6 align="right" id="timer">Time remaining: 10 secs</h6>
+            <h5>
                 <?php
                 echo "Question No ".$i;
                 ?>
-            </h3>
+            </h5>
             <hr>
             <h3>
                 <?php
@@ -130,7 +130,7 @@
                 ?> 
             </h3>
             <hr>
-            <form action="testscript.php" method="post">
+            <form action="testscript.php" method="post" id="test">
                 <div id="opta"><input type="radio" name="choice" value=1>
                 <?php
                 echo $opta;
