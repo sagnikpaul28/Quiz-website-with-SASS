@@ -1,10 +1,13 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html>
     <head>
         <title>Quiz</title>
         <link rel="shortcut icon" href="images/favicon.png" type="image/gif">
+        <meta HTTP-EQUIV="REFRESH" content="10; url=testscript.php">
         <link href="https://fonts.googleapis.com/css?family=Poppins:200,500,700" rel="stylesheet">
-        <meta charset="utf-8">
         <link rel="stylesheet" href="css/index.css" type="text/css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script>
@@ -32,7 +35,6 @@
         </script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         <?php
-        session_start();
         $topic = $_SESSION['topic'];
         if (strcmp($topic, "dc")==0)
         {
@@ -114,6 +116,7 @@
             $optb=$row['opt2'];
             $optc=$row['opt3'];
             $optd=$row['opt4'];
+            $_SESSION['ques']=$q;
         }
         ?>
         <div id="test-layer">

@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -5,9 +8,9 @@
         <link rel="shortcut icon" href="images/favicon.png" type="image/gif">
         <meta charset="utf-8">
         <link rel="stylesheet" href="css/index.css" type="text/css">
-        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Poppins:200,500,700" rel="stylesheet">
         <script src="js/jquery.scrollify.js"></script>
         <script type="text/javascript">
@@ -33,7 +36,6 @@
         {
             die(mysqli_error($con));
         }
-        session_start();
         if (isset($_SESSION['name']))
         {
             $name = $_SESSION['name'];
@@ -50,16 +52,16 @@
         <center>
             <section id="dc">
             <div class="panel-body" style="background-color: rgba(0, 0, 0, 0.7);height: 100%;">
-                <h2 style="color:aqua;font-family: 'Share', cursive;font-size: 6vmin;">DC Leaderboard</h2>
+                <h2 style="color:aqua;font-size: 6vmin;margin-top:0;">DC Leaderboard</h2>
                 <div class="row">
                     <div class="col-xs-2 col-xs-offset-1">
-                        <h3 style="color:aqua;font-family: 'Share', cursive;font-size: 5vmin;">No</h3>
+                        <h3 style="color:aqua;font-size: 5vmin;">No</h3>
                     </div>
                     <div class="col-xs-5">
-                        <h3 style="color:aqua;font-family: 'Share', cursive;font-size: 5vmin">Name</h3>
+                        <h3 style="color:aqua;font-size: 5vmin">Name</h3>
                     </div>
                     <div class="col-xs-3">
-                        <h3 style="color:aqua;font-family: 'Share', cursive;font-size: 5vmin">Score</h3>
+                        <h3 style="color:aqua;font-size: 5vmin">Score</h3>
                     </div>
                 </div>
                 <?php
@@ -75,9 +77,9 @@
                 while ($row)
                 {
                     echo '<div class="row">';
-                    echo '<div class="col-xs-2 col-xs-offset-1"><h4 style="color:aqua;font-size: 3.5vmin;font-family: "Share", cursive;font-size: 4.5vmin;">'.$i.'</h4></div>';
-                    echo '<div class="col-xs-5"><h4 style="color:aqua;font-size: 3.5vmin;font-family: "Share", cursive;">'.$row["name"].'</h4></div>';
-                    echo '<div class="col-xs-3"><h4 style="color:aqua;font-size: 3.5vmin;font-family: "Share", cursive;">'.$row["score"].'</h4></div>';
+                    echo '<div class="col-xs-2 col-xs-offset-1"><h4 style="color:aqua;font-size: 3.5vmin;font-size: 4.5vmin;">'.$i.'</h4></div>';
+                    echo '<div class="col-xs-5"><h4 style="color:aqua;font-size: 3.5vmin;">'.$row["name"].'</h4></div>';
+                    echo '<div class="col-xs-3"><h4 style="color:aqua;font-size: 3.5vmin;">'.$row["score"].'</h4></div>';
                     echo "</div>";
                     $row=mysqli_fetch_array($result);
                     $i++;
@@ -87,16 +89,16 @@
             </section>
             <section id="marvel">
             <div class="panel-body" style="background-color: rgba(0, 0, 0, 0.7);height: 100%;">
-                <h2 style="color:aqua;font-family: 'Share', cursive;font-size: 6vmin;">Marvel Leaderboard</h2>
+                <h2 style="color:aqua;font-size: 6vmin;margin-top:0;">Marvel Leaderboard</h2>
                 <div class="row">
                     <div class="col-xs-2 col-xs-offset-1">
-                        <h3 style="color:aqua;font-family: 'Share', cursive;font-size: 5vmin;">No</h3>
+                        <h3 style="color:aqua;font-size: 5vmin;">No</h3>
                     </div>
                     <div class="col-xs-5">
-                        <h3 style="color:aqua;font-family: 'Share', cursive;font-size: 5vmin">Name</h3>
+                        <h3 style="color:aqua;font-size: 5vmin">Name</h3>
                     </div>
                     <div class="col-xs-3">
-                        <h3 style="color:aqua;font-family: 'Share', cursive;font-size: 5vmin">Score</h3>
+                        <h3 style="color:aqua;font-size: 5vmin">Score</h3>
                     </div>
                 </div>
                 <?php
@@ -112,9 +114,9 @@
                 while ($row)
                 {
                     echo '<div class="row">';
-                    echo '<div class="col-xs-2 col-xs-offset-1"><h4 style="color:aqua;font-size: 3.5vmin;font-family: "Share", cursive;font-size: 4.5vmin;">'.$i.'</h4></div>';
-                    echo '<div class="col-xs-5"><h4 style="color:aqua;font-size: 3.5vmin;font-family: "Share", cursive;">'.$row["name"].'</h4></div>';
-                    echo '<div class="col-xs-3"><h4 style="color:aqua;font-size: 3.5vmin;font-family: "Share", cursive;">'.$row["score"].'</h4></div>';
+                    echo '<div class="col-xs-2 col-xs-offset-1"><h4 style="color:aqua;font-size: 3.5vmin;font-size: 4.5vmin;">'.$i.'</h4></div>';
+                    echo '<div class="col-xs-5"><h4 style="color:aqua;font-size: 3.5vmin;">'.$row["name"].'</h4></div>';
+                    echo '<div class="col-xs-3"><h4 style="color:aqua;font-size: 3.5vmin;">'.$row["score"].'</h4></div>';
                     echo "</div>";
                     $row=mysqli_fetch_array($result);
                     $i++;
@@ -124,16 +126,16 @@
             </section>
             <section id="got">
             <div class="panel-body" style="background-color: rgba(0, 0, 0, 0.7);height: 100%;">
-                <h2 style="color:aqua;font-family: 'Share', cursive;font-size: 6vmin;">Game of Thrones Leaderboard</h2>
+                <h2 style="color:aqua;font-size: 6vmin;margin-top:0;">Game of Thrones Leaderboard</h2>
                 <div class="row">
                     <div class="col-xs-2 col-xs-offset-1">
-                        <h3 style="color:aqua;font-family: 'Share', cursive;font-size: 5vmin;">No</h3>
+                        <h3 style="color:aqua;font-size: 5vmin;">No</h3>
                     </div>
                     <div class="col-xs-5">
-                        <h3 style="color:aqua;font-family: 'Share', cursive;font-size: 5vmin">Name</h3>
+                        <h3 style="color:aqua;font-size: 5vmin">Name</h3>
                     </div>
                     <div class="col-xs-3">
-                        <h3 style="color:aqua;font-family: 'Share', cursive;font-size: 5vmin">Score</h3>
+                        <h3 style="color:aqua;font-size: 5vmin">Score</h3>
                     </div>
                 </div>
                 <?php
@@ -149,9 +151,9 @@
                 while ($row)
                 {
                     echo '<div class="row">';
-                    echo '<div class="col-xs-2 col-xs-offset-1"><h4 style="color:aqua;font-size: 3.5vmin;font-family: "Share", cursive;font-size: 4.5vmin;">'.$i.'</h4></div>';
-                    echo '<div class="col-xs-5"><h4 style="color:aqua;font-size: 3.5vmin;font-family: "Share", cursive;">'.$row["name"].'</h4></div>';
-                    echo '<div class="col-xs-3"><h4 style="color:aqua;font-size: 3.5vmin;font-family: "Share", cursive;">'.$row["score"].'</h4></div>';
+                    echo '<div class="col-xs-2 col-xs-offset-1"><h4 style="color:aqua;font-size: 3.5vmin;font-size: 4.5vmin;">'.$i.'</h4></div>';
+                    echo '<div class="col-xs-5"><h4 style="color:aqua;font-size: 3.5vmin;">'.$row["name"].'</h4></div>';
+                    echo '<div class="col-xs-3"><h4 style="color:aqua;font-size: 3.5vmin;">'.$row["score"].'</h4></div>';
                     echo "</div>";
                     $row=mysqli_fetch_array($result);
                     $i++;
@@ -161,16 +163,16 @@
             </section>
             <section id = "football">
             <div class="panel-body" style="background-color: rgba(0, 0, 0, 0.7);height: 100%;">
-                <h2 style="color:aqua;font-family: 'Share', cursive;font-size: 6vmin;">Football Leaderboard</h2>
+                <h2 style="color:aqua;font-size: 6vmin;margin-top:0;">Football Leaderboard</h2>
                 <div class="row">
                     <div class="col-xs-2 col-xs-offset-1">
-                        <h3 style="color:aqua;font-family: 'Share', cursive;font-size: 5vmin;">No</h3>
+                        <h3 style="color:aqua;font-size: 5vmin;">No</h3>
                     </div>
                     <div class="col-xs-5">
-                        <h3 style="color:aqua;font-family: 'Share', cursive;font-size: 5vmin">Name</h3>
+                        <h3 style="color:aqua;font-size: 5vmin">Name</h3>
                     </div>
                     <div class="col-xs-3">
-                        <h3 style="color:aqua;font-family: 'Share', cursive;font-size: 5vmin">Score</h3>
+                        <h3 style="color:aqua;font-size: 5vmin">Score</h3>
                     </div>
                 </div>
                 <?php
@@ -186,9 +188,9 @@
                 while ($row)
                 {
                     echo '<div class="row">';
-                    echo '<div class="col-xs-2 col-xs-offset-1"><h4 style="color:aqua;font-size: 3.5vmin;font-family: "Share", cursive;font-size: 4.5vmin;">'.$i.'</h4></div>';
-                    echo '<div class="col-xs-5"><h4 style="color:aqua;font-size: 3.5vmin;font-family: "Share", cursive;">'.$row["name"].'</h4></div>';
-                    echo '<div class="col-xs-3"><h4 style="color:aqua;font-size: 3.5vmin;font-family: "Share", cursive;">'.$row["score"].'</h4></div>';
+                    echo '<div class="col-xs-2 col-xs-offset-1"><h4 style="color:aqua;font-size: 3.5vmin;font-size: 4.5vmin;">'.$i.'</h4></div>';
+                    echo '<div class="col-xs-5"><h4 style="color:aqua;font-size: 3.5vmin;">'.$row["name"].'</h4></div>';
+                    echo '<div class="col-xs-3"><h4 style="color:aqua;font-size: 3.5vmin;">'.$row["score"].'</h4></div>';
                     echo "</div>";
                     $row=mysqli_fetch_array($result);
                     $i++;

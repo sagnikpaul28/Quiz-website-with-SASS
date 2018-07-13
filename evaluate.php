@@ -1,3 +1,6 @@
+<?php 
+session_start();
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -17,7 +20,6 @@
             }
         </script>
         <?php
-        session_start();
         if (!isset($_SESSION['topic'])){
             header('location:index.php');
         }
